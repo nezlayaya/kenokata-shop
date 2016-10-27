@@ -210,15 +210,14 @@ header > .container {
 /*Shop now*/
 .shop_now {
     background-image: url(../images/get_it.png);
-    height: 185px;
+    background-size: cover;
+    background-position: 50%;
     position: relative;
     font-family: droid_serifregular;
+    padding: 5% 9%;
 }
-
 .shop_now h1 {
     margin: 0;
-    padding-top: 5%;
-    padding-left: 9%;
     font-size: 60px;
     color: #fff;
 }
@@ -236,7 +235,7 @@ header > .container {
     text-decoration: none;
     position: absolute;
     left: 80%;
-    bottom: 25%;
+    bottom: 33%;
 }
 
 .brand {
