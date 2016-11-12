@@ -9,7 +9,12 @@ body {
 }
 
 /*header*/
-
+header{
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 99999999;
+}
 .container {
     max-width: 1170px;
     margin: 0 auto;
@@ -115,6 +120,7 @@ header > .container {
 
 .front_img {
     float: right;
+    margin-top: 5%;
 }
 
 /*new_products and future products*/
@@ -413,7 +419,7 @@ p {
 
     .front_text {
         display: inline-block;
-        left: 8%;
+        left: 2%;
         width: 34%;
         top: 20%;
     }
@@ -448,6 +454,9 @@ p {
 }
 
 @media (max-width: 860px) and (min-width: 768px) {
+    header{
+        padding: 0 20px;
+    }
     .front > .container {
         width: auto;
     }
