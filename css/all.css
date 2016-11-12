@@ -1,11 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body {
     margin: 0;
     font-family: loraregular;
 }
 
 /*header*/
+
 .container {
-    width: 1170px;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -43,6 +49,9 @@ body {
 .basket {
     float: right;
     position: relative;
+    background-image: url("../images/basket.png");
+    width: 15px;
+    height: 20px;
 }
 
 .basket:after {
@@ -59,20 +68,20 @@ body {
 }
 
 header > .container {
-    padding: 10px 15px;
+    padding: 10px 16px;
 }
 
 .front > .container {
     overflow: hidden;
-    width: 1220px;
+    max-width: 1220px;
 }
 
 .front_text {
     text-align: left;
     width: 45%;
     position: absolute;
-    top: 60%;
-    left: 6%;
+    top: 30%;
+    left: 8%;
 }
 
 .front_text > h1 {
@@ -162,7 +171,7 @@ header > .container {
     left: 0;
     background: rgba(13, 14, 14, 0.24);
     position: absolute;
-    padding-top: 35%;
+    padding: 80px 40px;
     height: 236px;
 }
 
@@ -174,18 +183,25 @@ header > .container {
     background: #f72464;
     border-radius: 5px;
     display: block;
-    width: 35%;
     margin: 0 auto;
     margin-top: 15px;
     font-family: muliregular;
     font-size: 15px;
 }
+.none > a:hover{
+    color: #f72464;
+    background: #fff;
+}
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
 
 .block {
     position: relative;
     display: inline-block;
-    width: 260px;
-    margin-right: 28px;
     margin-bottom: 50px;
     line-height: 25px;
 }
@@ -205,6 +221,7 @@ header > .container {
 
 .block:hover .none {
     display: block;
+    height:85%;
 }
 
 /*Shop now*/
@@ -240,20 +257,15 @@ header > .container {
 
 .brand {
     background: url(../images/brand.png);
-    height: 134px;
-    padding-top: 50px;
+    padding: 50px;
+    background-size: cover;
+    background-position: 50%;
 }
 
 .brand > .container > ul > li {
     display: inline-block;
     list-style: none;
 }
-
-.brand > .container > ul {
-    width: 90%;
-    margin: 0 auto;
-}
-
 /*Blog posts*/
 .blog_posts > .container > article {
     width: 49%;
@@ -401,9 +413,9 @@ p {
 
     .front_text {
         display: inline-block;
-        left: 10px;
+        left: 8%;
         width: 34%;
-        top: 45%;
+        top: 20%;
     }
     .front_text>h1{
         font-size: 65px;
@@ -411,7 +423,6 @@ p {
     }
     .front_img {
         display: block;
-        padding-left: 26%;
     }
 
     .shop_now h1 {
@@ -448,7 +459,6 @@ p {
 
     .front_text {
         width: 35%;
-        top: 85%;
         left: 2%;
     }
 
@@ -495,18 +505,12 @@ p {
     .brand > .container > ul > li > a > img {
         height: 44px;
     }
-
     .shop_now h1 {
         font-size: 30px;
     }
-
     .shop_now p > a {
         padding: 15px 20px;
         bottom: 54%;
-    }
-
-    .front_text {
-        top: 35%;
     }
     .front_img{
         padding-left: 0;
