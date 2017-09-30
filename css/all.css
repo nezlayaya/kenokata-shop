@@ -8,6 +8,12 @@ body {
     font-family: loraregular;
 }
 
+button{
+    outline: none;
+}
+.mobile-menu{
+    display: none;
+}
 /*header*/
 header{
     position: fixed;
@@ -32,10 +38,6 @@ header{
     padding: 0;
 }
 
-.main-menu > li:first-child {
-    margin-left: 40px;
-}
-
 .main-menu > li > a {
     text-decoration: none;
     color: #000;
@@ -52,8 +54,8 @@ header{
 }
 
 .basket {
-    float: right;
-    position: relative;
+    position: fixed;
+    right: 20px;
     background-image: url("../images/basket.png");
     width: 15px;
     height: 20px;
@@ -239,13 +241,22 @@ header > .container {
     font-family: droid_serifregular;
     padding: 5% 9%;
 }
+
+
+.shop_now .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 65px 0;
+}
+
 .shop_now h1 {
     margin: 0;
     font-size: 60px;
     color: #fff;
 }
 
-.shop_now p > a {
+.shop_now button {
     display: inline-block;
     font-size: 22px;
     text-align: center;
@@ -256,9 +267,6 @@ header > .container {
     background: #f72464;
     border-radius: 5px;
     text-decoration: none;
-    position: absolute;
-    left: 80%;
-    bottom: 33%;
 }
 
 .brand {
@@ -352,7 +360,9 @@ header > .container {
 }
 
 .subscribe > .container > form {
-    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 40px auto 0;
 }
 
@@ -375,8 +385,10 @@ footer li {
     font-size: 13px;
 }
 
-.footer_menu > ul > li {
-    margin-right: 35px;
+.footer_menu > ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer_menu,
@@ -398,7 +410,7 @@ p {
     color: #fff;
 }
 
-.shop_now > .container > p > a:hover {
+.shop_now > .container button:hover {
     background: #fff;
     color: #f72464;
 }
@@ -433,10 +445,10 @@ p {
 
     .shop_now h1 {
         font-size: 46px;
+        text-align: center;
     }
 
-    .shop_now p > a {
-        bottom: 41%;
+    .shop_now button {
         font-size: 18px;
     }
 
@@ -453,7 +465,7 @@ p {
     }
 }
 
-@media (max-width: 860px) and (min-width: 768px) {
+@media screen and (max-width: 860px) and (min-width: 768px) {
     header{
         padding: 0 20px;
     }
@@ -481,18 +493,11 @@ p {
     }
 
     .shop_now h1 {
-        text-align: left;
         font-size: 35px;
-        padding: 65px 0;
     }
 
-    .shop_now p > a {
+    .shop_now button {
         padding: 10px 15px;
-        bottom: 40%;
-    }
-
-    .container {
-        width: auto;
     }
 
     .brand {
@@ -507,19 +512,50 @@ p {
     }
 }
 
-@media (max-width: 720px) {
+@media screen and (max-width: 767px){
+    .shop_now .container{
+        flex-wrap: wrap;
+        justify-content: center;
+        display: flex;
+    }
+    .shop_now button{
+        margin: 15px 0 0 0;
+    }
+    .mobile-menu{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url(../images/burger.png) no-repeat;
+        background-size: cover;
+        background-color: transparent;
+        border: none;
+        margin-left: 15px;
+    }
+    .main-menu{
+        display: none;
+    }
+    .main-menu li{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 809px){
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 720px) {
     .subscribe > .container > h1 + p + form {
         width: 72%;
     }
     .brand > .container > ul > li > a > img {
         height: 44px;
     }
-    .shop_now h1 {
-        font-size: 30px;
-    }
-    .shop_now p > a {
+    .shop_now button {
         padding: 15px 20px;
-        bottom: 54%;
     }
     .front_img{
         padding-left: 0;
@@ -527,7 +563,7 @@ p {
     }
 }
 
-@media (max-width: 687px) {
+@media screen and (max-width: 687px) {
     .front_img {
         width: 94%;
     }
@@ -568,7 +604,7 @@ p {
     }
 }
 
-@media (max-width: 670px) {
+@media screen and (max-width: 670px) {
     .front_text {
         position: inherit;
         width: 100%;
@@ -586,16 +622,33 @@ p {
     .front_img {
         display: none;
     }
-    .shop_now h1{
-        padding-top: 12%;
-        font-size: 20px;
-    }
 
-    .shop_now > .container > p > a {
+    .shop_now .container button {
         font-size: 15px;
-        left: 65%;
     }
     .main-menu > li > a{
         font-size: 10px;
 }
+}
+
+@media screen and (max-width: 583px){
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    .front_text{
+        padding: 20% 0 0 0;
+    }
+}
+
+@media screen and (max-width: 427px){
+    .subscribe > .container > form > input:last-child{
+        margin: 15px 0 0 0;
+    }
+    .footer_menu > ul {
+        display: flex;
+        flex-direction: column;
+    }
 }
